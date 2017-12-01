@@ -224,8 +224,6 @@ export default function(internals) {
     patch_insertAdjacentElement(HTMLElement.prototype, Native.HTMLElement_insertAdjacentElement);
   } else if (Native.Element_insertAdjacentElement) {
     patch_insertAdjacentElement(Element.prototype, Native.Element_insertAdjacentElement);
-  } else {
-    console.warn('Custom Elements: `Element#insertAdjacentElement` was not patched.');
   }
 
 

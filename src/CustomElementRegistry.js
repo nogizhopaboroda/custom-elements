@@ -86,9 +86,6 @@ export default class CustomElementRegistry {
     try {
       /** @type {!Object} */
       const prototype = constructor.prototype;
-      if (!(prototype instanceof Object)) {
-        throw new TypeError('The custom element constructor\'s prototype is not an object.');
-      }
 
       function getCallback(name) {
         const callbackValue = prototype[name];
