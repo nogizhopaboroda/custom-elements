@@ -50,6 +50,7 @@ export default function(internals) {
         }
 
         baseDescriptor.set.call(this, htmlString);
+        if(!document){ return; }
 
         if (removedElements) {
           for (let i = 0; i < removedElements.length; i++) {

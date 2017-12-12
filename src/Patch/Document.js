@@ -16,7 +16,7 @@ export default function(internals) {
      */
     function(localName) {
       // Only create custom elements if this document is associated with the registry.
-      if (this.__CE_hasRegistry) {
+      if (document && this && this.__CE_hasRegistry) {
         const definition = internals.localNameToDefinition(localName);
         if (definition) {
           return new (definition.constructor)();
