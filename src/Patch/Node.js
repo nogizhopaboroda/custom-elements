@@ -6,6 +6,8 @@ import * as Utilities from '../Utilities.js';
  * @param {!CustomElementInternals} internals
  */
 export default function(internals) {
+  if(Node.prototype.patched){ return; }
+  Node.prototype.patched = true;
   // `Node#nodeValue` is implemented on `Attr`.
   // `Node#textContent` is implemented on `Attr`, `Element`.
 
